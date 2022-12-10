@@ -1,0 +1,48 @@
+#id_name_specilist_timing_qualification_roomNb
+#21_Dr.Gody_ENT_5am-11am_MBBS,MD_17
+#32_Dr.Vikram_Physician_10pm-3am_MBBS,MD_45
+#17_Dr.Amy_Surgeon_8pm-2am_BDM_8
+#33_Dr.David_Artho_10am-4pm_MBBS,MS_40
+#123_Dr. Ross_Headackes_8pm-10am_Mst_102
+#66_Dr. Mike_Heart_9am-5pm_MS_2
+#Hospital  Facilities are:
+#Ambulance
+#Admissions 
+#Canteen
+#Emergency
+#Facility_Cost
+#Lab1_800
+#Lab2_1200
+#Lab3_500
+#Lab4_50
+#id_Name_Disease_Gender_Age
+#12_Pankaj_Cancer_Male_30
+#13_Janina_Cold_Female_23
+#14_Alonna_Malaria_Female_45
+#15_Ravi_Diabetes_Male_65
+
+class Management:
+    def DisplayMenu():
+        while 1:
+
+            doctor_ = Doctor(21,"Dr.Gody", "ENT", "5am-11am", "MBBS", 17)
+            facility_ = Facility("Ambulance")
+            lab_ = Laboratory("Lab1", 800)
+            patient_ = Patient(12, "Pankaj", "Cancer", "Male", 30)
+
+            input = input("""Welcome to Alberta Hospital (AH) Managment system 
+                        Select from the following options, or select 0 to stop: 
+                        1 - 	Doctors
+                        2 - 	Facilities
+                        3 - 	Laboratories
+                        4 - 	Patients """)
+            if input == 1:
+                doctor_.displayDoctorsList()
+            elif input == 2:
+                facility_.displayFacilities()
+            elif input == 3:
+                lab_.displayLabsList()
+            elif input == 4:
+                patient_.displayPatientInfo()
+            elif input == 0:
+                exit()
